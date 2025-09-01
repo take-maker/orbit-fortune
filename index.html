@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日の占い - あなたの星座運勢</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1 class="title">✨ 今日の占い ✨</h1>
+            <p class="subtitle">あなたの星座から今日の運勢をお知らせします</p>
+            <div class="current-date">2025年8月31日の運勢</div>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section card" id="inputSection">
+                <h2>生年月日を入力してください</h2>
+                <div class="input-group">
+                    <label for="birthDate" class="form-label">生年月日</label>
+                    <input type="date" id="birthDate" class="form-control date-input" required>
+                </div>
+                <button type="button" id="fortuneButton" class="btn btn--primary fortune-btn">
+                    🔮 占う
+                </button>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="zodiac-card card">
+                    <div class="zodiac-header">
+                        <div class="zodiac-icon" id="zodiacIcon"></div>
+                        <div class="zodiac-info">
+                            <h2 class="zodiac-name" id="zodiacName"></h2>
+                            <p class="zodiac-period" id="zodiacPeriod"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="fortune-content">
+                        <div class="overall-fortune">
+                            <h3>📊 総合運</h3>
+                            <p id="overallFortune"></p>
+                        </div>
+
+                        <div class="fortune-grid">
+                            <div class="fortune-item">
+                                <h4>💖 恋愛運</h4>
+                                <p id="loveFortune"></p>
+                            </div>
+                            
+                            <div class="fortune-item">
+                                <h4>💼 仕事運</h4>
+                                <p id="workFortune"></p>
+                            </div>
+                            
+                            <div class="fortune-item">
+                                <h4>💰 金運</h4>
+                                <p id="moneyFortune"></p>
+                            </div>
+                        </div>
+
+                        <div class="lucky-items">
+                            <div class="lucky-item">
+                                <h4>🌈 ラッキーカラー</h4>
+                                <div class="lucky-color-display">
+                                    <div class="color-swatch" id="luckyColorSwatch"></div>
+                                    <span id="luckyColor"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="lucky-item">
+                                <h4>🍀 ラッキーナンバー</h4>
+                                <div class="lucky-number" id="luckyNumber"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="tryAgainButton" class="btn btn--secondary try-again-btn">
+                        もう一度占う
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>星の導きがあなたに幸運をもたらしますように ⭐</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
